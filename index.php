@@ -115,12 +115,66 @@
     var_dump($array_numeri);
     ?>
 
-
+    <br>
     <!-- Snack 5
     Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo. -->
 
+    <h1>SNACK 5</h1>
 
+    <?php
 
+    $testo = "Mai, mai scorderai
+    L'attimo, la terra che tremò
+    L'aria si incendiò
+    E poi silenzio
+    E gli avvoltoi sulle case sopra la città
+    Senza pietà.
+    Chi mai fermerà
+    La follia, che per le strade va
+    Chi mai spezzerà
+    Le nostre catene.
+    Chi da quest'incubo nero ci risveglierà
+    Chi mai potrà.
+    Ken, sei tu
+    Fantastico guerriero
+    Sceso come un fulmine dal cielo.
+    Ken, sei tu
+    Il nostro condottiero
+    E nessuno al mondo adesso è solo.
+    Ken, sei libero
+    L'unico, l'ultimo angelo
+    Ken, sei l'energia
+    L'azzurra magia (Magia, magia, magia)
+    Stella dell'orsa maggiore
+    Stella su di noi
+    Guerriero va!.
+    Ken, sei tu
+    Col pugno tuo più forte
+    Tu che hai messo KO la morte.
+    Ken, sei tu
+    L'acciaio nelle mani
+    Tu la mia speranza nel domani.
+    Mai, mai scorderai
+    L'attimo
+    La terra che tremò
+    Vai, vai tu vivrai
+    Giorni felici.
+    Stella dell'orsa maggiore
+    Stella su di noi
+    Guerriero vai";
+
+    $array_paragrafi = explode('.', $testo);
+
+    var_dump($array_paragrafi);
+
+    ?>
+
+    <div><?= $testo ?></div>
+
+    <?php for ($index = 0; $index < count($array_paragrafi); $index++) { ?>
+        <h6><?= $array_paragrafi[$index] ?></h6> <?php
+                                                }
+                                                    ?>
 </body>
 
 </html>
