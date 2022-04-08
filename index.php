@@ -100,15 +100,14 @@
     $numero_random = rand(1, 20);
     $array_numeri = [];
 
-    for ($index = 0; $index < 15; $index++) {
+    while (count($array_numeri) < 15) {
 
         $numero_random = rand(1, 20);
 
-        if (in_array($numero_random, $array_numeri)) {
-        } else {
-            $array_numeri[] = [$numero_random]; ?>
+        if (!in_array($numero_random, $array_numeri)) {
+            $array_numeri[] = $numero_random; ?>
 
-            <span><?= $array_numeri[$index] ?></span>
+            <span><?= $numero_random ?> - </span>
     <?php
         }
     }
