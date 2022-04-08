@@ -70,9 +70,28 @@
     </ul>
     <br>
     <!-- Snack 2
-    Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” -->
+    Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione)
+    che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” -->
 
     <h1>SNACK 2</h1>
+
+    <?php
+
+    if (isset($_GET['name']) && isset($_GET['email']) && isset($_GET['age'])) {
+        $name = $_GET['name'];
+        $email = $_GET['email'];
+        $age = $_GET['age'];
+    }
+
+    if (strlen($name) > 3 && strpos($email, '@') && strpos($email, '.') && is_numeric($age)) { ?>
+        <h4>Accesso Riuscito</h4>
+    <?php
+    } else { ?>
+        <h4>Accesso Negato</h4>
+    <?php
+    }
+
+    ?>
 
 
     <form action="">
